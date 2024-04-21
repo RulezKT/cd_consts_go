@@ -518,6 +518,25 @@ type PolarPosition struct {
 	VelocityZ float64
 }
 
+// months from 1 to 12
+var MonthsArr = [13]string{"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
+
+// zodiac names from 0 to 11
+var ZodiacNames = [13]string{
+	"",
+	"Aries",
+	"Taurus",
+	"Gemini",
+	"Cancer",
+	"Leo",
+	"Virgo",
+	"Libra",
+	"Scorpio",
+	"Sagittarius",
+	"Capricorn",
+	"Aquarius",
+	"Pisces"}
+
 func GetName(targetCode int) string {
 
 	NaifCodes := map[int]string{
