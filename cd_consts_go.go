@@ -69,6 +69,18 @@ const (
 	JD2000             = 2451545
 	// 	JD2000       float64 = 2451545.0 //12:00 UT on January 1, 2000
 	JD1950 = 2433282.5
+
+	// размер одной линии в десятичных градусах
+	OneLineInDec float64 = 0.9375
+
+	// размер одного цвета в десятичных градусах
+	OneColorInDec float64 = 0.15625
+
+	// размер одного тона в десятичных градусах
+	OneToneInDec float64 = 0.026041666666666668
+
+	// размер одной базы в десятичных градусах
+	OneBaseInDec float64 = 0.005208333333333334
 )
 
 // main type with complete calcuated information
@@ -345,6 +357,12 @@ type ZodiacStructure struct {
 	Minutes int
 	Seconds int
 	Zodiac  string
+}
+
+// гексаграммы с  диапазонами градусов на космограмме, первое значение включая, второе не включая
+type HexRangeRAD struct {
+	startDegree float64
+	endDegree   float64
 }
 
 type Phs struct {
