@@ -498,6 +498,26 @@ type FileRecordStruct struct {
 	// ftpstr : "FTPSTR:\r:\n:\r\n:\r\x00:\x81:\x10\xce:ENDFTP",
 }
 
+type Position struct {
+	X float64
+	Y float64
+	Z float64
+
+	VelocityX float64
+	VelocityY float64
+	VelocityZ float64
+}
+
+type PolarPosition struct {
+	Longitude float64
+	Latitude  float64
+	Radius    float64
+
+	VelocityX float64
+	VelocityY float64
+	VelocityZ float64
+}
+
 func GetName(targetCode int) string {
 
 	NaifCodes := map[int]string{
