@@ -56,6 +56,16 @@ const (
 
 	// from 0 to 8
 	NUMBEROFCENTERS = 9
+
+	SEC_TO_RAD         = 4.8481368110953599359e-6 /* radians per arc second */
+	RAD_TO_DEG         = 5.7295779513082320877e1
+	PI         float64 = 3.14159265358979323846
+	// pi/180 - Ratio for conversion degrees to radians
+	// we need it for trigonometric functions
+	RAD_RATIO          = 0.017453292519943295
+	RAD_PER_ARCSECONDS = 4.8481368110953599359e-6 //STR radians per arc second
+	JD2000             = 2451545
+	JD1950             = 2433282.5
 )
 
 // main type with complete calcuated information
