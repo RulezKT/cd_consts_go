@@ -361,8 +361,8 @@ type ZodiacStructure struct {
 
 // гексаграммы с  диапазонами градусов на космограмме, первое значение включая, второе не включая
 type HexRangeRAD struct {
-	startDegree float64
-	endDegree   float64
+	StartDegree float64
+	EndDegree   float64
 }
 
 type Phs struct {
