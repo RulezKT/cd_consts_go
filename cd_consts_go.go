@@ -16,6 +16,8 @@ const (
 	//Astronomical Unit
 	AU = 0.1495978707e9 // km 149597870.7
 
+	SEC_IN_1_DAY int = 86400
+
 	// Здесь мы как начальное значение ставим eps = 23°26'21,448" градуса согласно CD
 	// double const RAD_TO_DEG = 5.7295779513082320877e1;
 	// Obliquity of the ecliptic  = 23°26'21,448"  - на 1 января 2000 года = 23.43929111111111
@@ -65,7 +67,8 @@ const (
 	RAD_RATIO          = 0.017453292519943295
 	RAD_PER_ARCSECONDS = 4.8481368110953599359e-6 //STR radians per arc second
 	JD2000             = 2451545
-	JD1950             = 2433282.5
+	// 	JD2000       float64 = 2451545.0 //12:00 UT on January 1, 2000
+	JD1950 = 2433282.5
 )
 
 // main type with complete calcuated information
