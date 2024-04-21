@@ -227,9 +227,66 @@ func InitPlanets() Planets {
 }
 */
 
+// simple Date structure
+type GregDate struct {
+	Year    int `json:"year"`
+	Month   int `json:"month"`
+	Day     int `json:"day"`
+	Hour    int `json:"hour"`
+	Minutes int `json:"minutes"`
+	Seconds int `json:"seconds"`
+}
+
+func (gd GregDate) String() string {
+
+	var monthsFormatted string
+	if gd.Month > 9 {
+		monthsFormatted = "" + fmt.Sprint(gd.Month)
+
+	} else {
+		monthsFormatted = "0" + fmt.Sprint(gd.Month)
+	}
+
+	var daysFormatted string
+	if gd.Day > 9 {
+		daysFormatted = "" + fmt.Sprint(gd.Day)
+
+	} else {
+		daysFormatted = "0" + fmt.Sprint(gd.Day)
+	}
+
+	var hoursFormatted string
+	if gd.Hour > 9 {
+		hoursFormatted = "" + fmt.Sprint(gd.Hour)
+
+	} else {
+		hoursFormatted = "0" + fmt.Sprint(gd.Hour)
+	}
+
+	var minutesFormatted string
+	if gd.Minutes > 9 {
+		minutesFormatted = "" + fmt.Sprint(gd.Minutes)
+
+	} else {
+		minutesFormatted = "0" + fmt.Sprint(gd.Minutes)
+	}
+
+	var secondsFormatted string
+	if gd.Seconds > 9 {
+		secondsFormatted = "" + fmt.Sprint(gd.Seconds)
+
+	} else {
+		secondsFormatted = "0" + fmt.Sprint(gd.Seconds)
+	}
+
+	return "Date:  " + daysFormatted + "." + monthsFormatted + "." + fmt.Sprint(gd.Year) +
+		"  Time: " + hoursFormatted + ":" + minutesFormatted + ":" + secondsFormatted
+}
+
 type TimeData struct {
-	// LocalTime     gregdate.Date //для design всегда 0
-	// UtcTime       gregdate.Date
+	LocalTime GregDate //для design всегда 0
+	UtcTime   GregDate
+
 	TypeOfTyme    int    //Изначальный источник данных 2 - local time, 1- UTC Time,  0 - Ephemeries time
 	Offset        int    //смещение локального времени от UTC в секундах
 	SecFromJd2000 int64  // Ephemeries time
