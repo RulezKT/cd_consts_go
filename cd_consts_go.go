@@ -228,6 +228,7 @@ func InitPlanets() Planets {
 */
 
 // simple Date structure
+// ok
 type GregDate struct {
 	Year    int `json:"year"`
 	Month   int `json:"month"`
