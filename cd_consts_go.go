@@ -321,13 +321,13 @@ func (gd GregDate) String() string {
 }
 
 type TimeData struct {
-	LocalTime GregDate //для design всегда 0
-	UtcTime   GregDate
+	LocalTime GregDate `json:"LocalTime "` //для design всегда 0
+	UtcTime   GregDate `json:"UtcTime"`
 
-	TypeOfTyme    int    //Изначальный источник данных 2 - local time, 1- UTC Time,  0 - Ephemeries time
-	Offset        int    //смещение локального времени от UTC в секундах
-	SecFromJd2000 int64  // Ephemeries time
-	Place         string // не пустой, только если время изначально Local, для design всегда пустой
+	TypeOfTyme    int    `json:"TypeOfTyme"`    //Изначальный источник данных 2 - local time, 1- UTC Time,  0 - Ephemeries time
+	Offset        int    `json:"Offset"`        //смещение локального времени от UTC в секундах
+	SecFromJd2000 int64  `json:"SecFromJd2000"` // Ephemeries time
+	Place         string `json:"Place"`         // не пустой, только если время изначально Local, для design всегда пустой
 }
 
 type HdStructure struct {
