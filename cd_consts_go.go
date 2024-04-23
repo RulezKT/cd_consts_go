@@ -571,17 +571,17 @@ type DeltaTTableStructure struct {
 }
 
 // первый и последнй года таблицы значений Дельта Т для быстрого доступа и сама таблица
-type DeltaTTable struct {
-	FirstYear int
-	LastYear  int
-	Table     []DeltaTTableStructure
-}
+// type DeltaTTable struct {
+// 	FirstYear int
+// 	LastYear  int
+// 	Table     []DeltaTTableStructure
+// }
 
 type BspFile struct {
 	FilePtr     *bytes.Reader
 	FileInfo    *FileInfo
 	NodesCoords *[]NodesJsonStruct
-	DeltaTTable *DeltaTTable
+	// DeltaTTable *DeltaTTable
 }
 
 // [-4733494022,"north"],[-4732252235,"south"]
